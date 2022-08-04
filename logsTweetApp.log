@@ -1,0 +1,1314 @@
+"2022-08-04T13:59:55.213Z-restartedMain INFO  c.t.TweetApplication: Starting TweetApplication using Java 12.0.1 on DESKTOP-JQTN3HQ with PID 736 (D:\UseCase\tweet\target\classes started by Abi in D:\UseCase\tweet)
+""2022-08-04T13:59:55.214Z-restartedMain INFO  c.t.TweetApplication: No active profile set, falling back to default profiles: default
+""2022-08-04T13:59:56.776Z-restartedMain INFO  o.s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+""2022-08-04T13:59:56.790Z-restartedMain INFO  o.s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 13 ms. Found 2 MongoDB repository interfaces.
+""2022-08-04T13:59:57.027Z-restartedMain INFO  o.s.b.w.e.t.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+""2022-08-04T13:59:57.029Z-restartedMain INFO  o.a.c.c.StandardService: Starting service [Tomcat]
+""2022-08-04T13:59:57.029Z-restartedMain INFO  o.a.c.c.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.48]
+""2022-08-04T13:59:57.192Z-restartedMain INFO  o.a.c.c.C.[.[.[/]: Initializing Spring embedded WebApplicationContext
+""2022-08-04T13:59:57.193Z-restartedMain INFO  o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1973 ms
+""2022-08-04T13:59:57.459Z-restartedMain INFO  o.m.d.cluster  : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+""2022-08-04T13:59:57.463Z-cluster-ClusterId{value='62eb838509e9541b8100bf5c', description='null'}-localhost:27017 INFO  o.m.d.connection: Opened connection [connectionId{localValue:9, serverValue:22}] to localhost:27017
+""2022-08-04T13:59:57.515Z-cluster-ClusterId{value='62eb838509e9541b8100bf5c', description='null'}-localhost:27017 INFO  o.m.d.cluster  : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1660300}
+""2022-08-04T13:59:57.515Z-cluster-rtt-ClusterId{value='62eb838509e9541b8100bf5c', description='null'}-localhost:27017 INFO  o.m.d.connection: Opened connection [connectionId{localValue:10, serverValue:23}] to localhost:27017
+""2022-08-04T13:59:57.516Z-restartedMain WARN  o.s.d.c.CustomConversions: Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+""2022-08-04T13:59:57.664Z-restartedMain INFO  o.s.b.d.a.OptionalLiveReloadServer: LiveReload server is running on port 35729
+""2022-08-04T13:59:57.675Z-restartedMain WARN  o.s.d.c.CustomConversions: Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+""2022-08-04T13:59:57.801Z-restartedMain INFO  c.t.k.KafkaProducerConfig: Kafka producer bean for string method created
+""2022-08-04T13:59:57.801Z-restartedMain INFO  c.t.k.KafkaProducerConfig: Kalfa configuration for string producer method is completed
+""2022-08-04T13:59:57.805Z-restartedMain INFO  c.t.k.KafkaProducerConfig: kafka producer bean for tweet method created
+""2022-08-04T13:59:57.805Z-restartedMain INFO  c.t.k.KafkaProducerConfig: Kalfa configuration for tweet producer method is completed
+""2022-08-04T13:59:57.811Z-restartedMain INFO  c.t.k.KafkaConsumerConfig: Kalfa configuration for tweet consumer method is completed
+""2022-08-04T13:59:58.142Z-restartedMain INFO  c.t.k.KafkaConsumerConfig: Kafka consumer bean for tweet method created
+""2022-08-04T13:59:58.203Z-restartedMain DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping: 19 mappings in 'requestMappingHandlerMapping'
+""2022-08-04T13:59:58.225Z-restartedMain INFO  o.s.b.a.e.w.EndpointLinksResolver: Exposing 3 endpoint(s) beneath base path '/actuator'
+""2022-08-04T13:59:58.263Z-restartedMain INFO  c.t.k.KafkaConsumerConfig: Kalfa configuration for string consumer method is completed
+""2022-08-04T13:59:58.264Z-restartedMain INFO  c.t.k.KafkaConsumerConfig: Kafka consumer bean for string method created
+""2022-08-04T13:59:58.302Z-restartedMain DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter: ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""2022-08-04T13:59:58.354Z-restartedMain DEBUG o.s.w.s.h.SimpleUrlHandlerMapping: Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+""2022-08-04T13:59:58.359Z-restartedMain DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver: ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+""2022-08-04T13:59:58.406Z-restartedMain INFO  o.a.k.c.c.ConsumerConfig: ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group_id1-7
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group_id1
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+""2022-08-04T13:59:58.410Z-restartedMain WARN  o.a.k.c.c.ConsumerConfig: The configuration 'spring.json.trusted.packages' was supplied but isn't a known config.
+""2022-08-04T13:59:58.410Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka version: 2.8.0
+""2022-08-04T13:59:58.410Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka commitId: ebb1d6e21cc92130
+""2022-08-04T13:59:58.410Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka startTimeMs: 1659601798410
+""2022-08-04T13:59:58.411Z-restartedMain INFO  o.a.k.c.c.KafkaConsumer: [Consumer clientId=consumer-group_id1-7, groupId=group_id1] Subscribed to topic(s): Logs
+""2022-08-04T13:59:58.455Z-restartedMain INFO  o.a.k.c.c.ConsumerConfig: ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group_id2-8
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group_id2
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+""2022-08-04T13:59:58.458Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.Metadata: [Consumer clientId=consumer-group_id1-7, groupId=group_id1] Cluster ID: Eg2eKKhORrOd9sxU5l-n5w
+""2022-08-04T13:59:58.458Z-restartedMain WARN  o.a.k.c.c.ConsumerConfig: The configuration 'spring.json.trusted.packages' was supplied but isn't a known config.
+""2022-08-04T13:59:58.458Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka version: 2.8.0
+""2022-08-04T13:59:58.458Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka commitId: ebb1d6e21cc92130
+""2022-08-04T13:59:58.459Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka startTimeMs: 1659601798458
+""2022-08-04T13:59:58.459Z-restartedMain INFO  o.a.k.c.c.KafkaConsumer: [Consumer clientId=consumer-group_id2-8, groupId=group_id2] Subscribed to topic(s): TweetApp
+""2022-08-04T13:59:58.543Z-restartedMain INFO  o.s.b.w.e.t.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+""2022-08-04T13:59:58.543Z-restartedMain INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Context refreshed
+""2022-08-04T13:59:58.544Z-restartedMain INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Found 1 custom documentation plugin(s)
+""2022-08-04T13:59:58.545Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.Metadata: [Consumer clientId=consumer-group_id2-8, groupId=group_id2] Cluster ID: Eg2eKKhORrOd9sxU5l-n5w
+""2022-08-04T13:59:58.547Z-restartedMain INFO  s.d.s.w.s.ApiListingReferenceScanner: Scanning for api listing references
+""2022-08-04T13:59:58.625Z-restartedMain INFO  c.t.TweetApplication: Started TweetApplication in 4.046 seconds (JVM running for 3531.624)
+""2022-08-04T13:59:58.628Z-restartedMain INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener: Condition evaluation unchanged
+""2022-08-04T13:59:58.750Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-8, groupId=group_id2] Discovered group coordinator DESKTOP-JQTN3HQ:9092 (id: 2147483647 rack: null)
+""2022-08-04T13:59:58.750Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-7, groupId=group_id1] Discovered group coordinator DESKTOP-JQTN3HQ:9092 (id: 2147483647 rack: null)
+""2022-08-04T13:59:58.751Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-7, groupId=group_id1] (Re-)joining group
+""2022-08-04T13:59:58.751Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-8, groupId=group_id2] (Re-)joining group
+""2022-08-04T13:59:58.784Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-7, groupId=group_id1] (Re-)joining group
+""2022-08-04T13:59:58.836Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-8, groupId=group_id2] (Re-)joining group
+""2022-08-04T13:59:58.966Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-7, groupId=group_id1] Successfully joined group with generation Generation{generationId=49, memberId='consumer-group_id1-7-334b09e3-ac32-4cd4-aeb3-274bf1b6ce79', protocol='range'}
+""2022-08-04T13:59:58.966Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-7, groupId=group_id1] Finished assignment for group at generation 49: {consumer-group_id1-7-334b09e3-ac32-4cd4-aeb3-274bf1b6ce79=Assignment(partitions=[Logs-0, Logs-1, Logs-2])}
+""2022-08-04T13:59:58.967Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-8, groupId=group_id2] Successfully joined group with generation Generation{generationId=49, memberId='consumer-group_id2-8-e31794fa-5286-41da-a07d-2a0d4be3603a', protocol='range'}
+""2022-08-04T13:59:58.967Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-8, groupId=group_id2] Finished assignment for group at generation 49: {consumer-group_id2-8-e31794fa-5286-41da-a07d-2a0d4be3603a=Assignment(partitions=[TweetApp-0, TweetApp-1, TweetApp-2])}
+""2022-08-04T13:59:59.021Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-8, groupId=group_id2] Successfully synced group in generation Generation{generationId=49, memberId='consumer-group_id2-8-e31794fa-5286-41da-a07d-2a0d4be3603a', protocol='range'}
+""2022-08-04T13:59:59.021Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-8, groupId=group_id2] Notifying assignor about the new Assignment(partitions=[TweetApp-0, TweetApp-1, TweetApp-2])
+""2022-08-04T13:59:59.051Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-8, groupId=group_id2] Adding newly assigned partitions: TweetApp-1, TweetApp-0, TweetApp-2
+""2022-08-04T13:59:59.052Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-7, groupId=group_id1] Successfully synced group in generation Generation{generationId=49, memberId='consumer-group_id1-7-334b09e3-ac32-4cd4-aeb3-274bf1b6ce79', protocol='range'}
+""2022-08-04T13:59:59.052Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-7, groupId=group_id1] Notifying assignor about the new Assignment(partitions=[Logs-0, Logs-1, Logs-2])
+""2022-08-04T13:59:59.052Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-7, groupId=group_id1] Adding newly assigned partitions: Logs-0, Logs-2, Logs-1
+""2022-08-04T13:59:59.055Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-8, groupId=group_id2] Setting offset for partition TweetApp-2 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T13:59:59.055Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-7, groupId=group_id1] Setting offset for partition Logs-0 to the committed offset FetchPosition{offset=15, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T13:59:59.055Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-8, groupId=group_id2] Setting offset for partition TweetApp-1 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T13:59:59.055Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-8, groupId=group_id2] Setting offset for partition TweetApp-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T13:59:59.055Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-7, groupId=group_id1] Setting offset for partition Logs-2 to the committed offset FetchPosition{offset=14, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T13:59:59.055Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer: group_id2: partitions assigned: [TweetApp-1, TweetApp-0, TweetApp-2]
+""2022-08-04T13:59:59.055Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-7, groupId=group_id1] Setting offset for partition Logs-1 to the committed offset FetchPosition{offset=24, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T13:59:59.055Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer: group_id1: partitions assigned: [Logs-0, Logs-2, Logs-1]
+""2022-08-04T14:01:24.952Z-restartedMain INFO  c.t.TweetApplication: Starting TweetApplication using Java 12.0.1 on DESKTOP-JQTN3HQ with PID 15312 (D:\UseCase\tweet\target\classes started by Abi in D:\UseCase\tweet)
+""2022-08-04T14:01:24.956Z-restartedMain INFO  c.t.TweetApplication: No active profile set, falling back to default profiles: default
+""2022-08-04T14:01:25.386Z-restartedMain INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""2022-08-04T14:01:25.387Z-restartedMain INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+""2022-08-04T14:01:27.466Z-restartedMain INFO  o.s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+""2022-08-04T14:01:28.036Z-restartedMain INFO  o.s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 562 ms. Found 2 MongoDB repository interfaces.
+""2022-08-04T14:01:34.387Z-restartedMain INFO  o.s.b.w.e.t.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+""2022-08-04T14:01:34.470Z-restartedMain INFO  o.a.c.c.StandardService: Starting service [Tomcat]
+""2022-08-04T14:01:34.470Z-restartedMain INFO  o.a.c.c.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.48]
+""2022-08-04T14:01:34.842Z-restartedMain INFO  o.a.c.c.C.[.[.[/]: Initializing Spring embedded WebApplicationContext
+""2022-08-04T14:01:34.843Z-restartedMain INFO  o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 9455 ms
+""2022-08-04T14:01:35.666Z-restartedMain INFO  o.m.d.cluster  : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+""2022-08-04T14:01:35.848Z-cluster-rtt-ClusterId{value='62eb83e7f204131bdbd90af6', description='null'}-localhost:27017 INFO  o.m.d.connection: Opened connection [connectionId{localValue:2, serverValue:25}] to localhost:27017
+""2022-08-04T14:01:35.850Z-cluster-ClusterId{value='62eb83e7f204131bdbd90af6', description='null'}-localhost:27017 INFO  o.m.d.connection: Opened connection [connectionId{localValue:1, serverValue:24}] to localhost:27017
+""2022-08-04T14:01:35.851Z-cluster-ClusterId{value='62eb83e7f204131bdbd90af6', description='null'}-localhost:27017 INFO  o.m.d.cluster  : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=35963900}
+""2022-08-04T14:01:35.917Z-restartedMain WARN  o.s.d.c.CustomConversions: Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+""2022-08-04T14:01:36.059Z-restartedMain INFO  o.s.b.d.a.OptionalLiveReloadServer: LiveReload server is running on port 35729
+""2022-08-04T14:01:36.081Z-restartedMain WARN  o.s.d.c.CustomConversions: Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+""2022-08-04T14:01:36.592Z-restartedMain INFO  c.t.k.KafkaProducerConfig: Kafka producer bean for string method created
+""2022-08-04T14:01:36.611Z-restartedMain INFO  c.t.k.KafkaProducerConfig: Kalfa configuration for string producer method is completed
+""2022-08-04T14:01:36.908Z-restartedMain INFO  c.t.k.KafkaProducerConfig: kafka producer bean for tweet method created
+""2022-08-04T14:01:36.909Z-restartedMain INFO  c.t.k.KafkaProducerConfig: Kalfa configuration for tweet producer method is completed
+""2022-08-04T14:01:37.313Z-restartedMain INFO  c.t.k.KafkaConsumerConfig: Kalfa configuration for tweet consumer method is completed
+""2022-08-04T14:01:37.536Z-restartedMain INFO  c.t.k.KafkaConsumerConfig: Kafka consumer bean for tweet method created
+""2022-08-04T14:01:38.089Z-restartedMain DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping: 19 mappings in 'requestMappingHandlerMapping'
+""2022-08-04T14:01:38.274Z-restartedMain INFO  o.s.b.a.e.w.EndpointLinksResolver: Exposing 3 endpoint(s) beneath base path '/actuator'
+""2022-08-04T14:01:38.419Z-restartedMain INFO  c.t.k.KafkaConsumerConfig: Kalfa configuration for string consumer method is completed
+""2022-08-04T14:01:38.421Z-restartedMain INFO  c.t.k.KafkaConsumerConfig: Kafka consumer bean for string method created
+""2022-08-04T14:01:38.576Z-restartedMain DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter: ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""2022-08-04T14:01:38.644Z-restartedMain DEBUG o.s.w.s.h.SimpleUrlHandlerMapping: Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+""2022-08-04T14:01:38.653Z-restartedMain DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver: ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+""2022-08-04T14:01:39.357Z-restartedMain INFO  o.a.k.c.c.ConsumerConfig: ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group_id1-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group_id1
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+""2022-08-04T14:01:39.707Z-restartedMain WARN  o.a.k.c.c.ConsumerConfig: The configuration 'spring.json.trusted.packages' was supplied but isn't a known config.
+""2022-08-04T14:01:39.727Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka version: 2.8.0
+""2022-08-04T14:01:39.727Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka commitId: ebb1d6e21cc92130
+""2022-08-04T14:01:39.728Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka startTimeMs: 1659601899724
+""2022-08-04T14:01:39.733Z-restartedMain INFO  o.a.k.c.c.KafkaConsumer: [Consumer clientId=consumer-group_id1-1, groupId=group_id1] Subscribed to topic(s): Logs
+""2022-08-04T14:01:39.795Z-restartedMain INFO  o.a.k.c.c.ConsumerConfig: ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group_id2-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group_id2
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+""2022-08-04T14:01:39.805Z-restartedMain WARN  o.a.k.c.c.ConsumerConfig: The configuration 'spring.json.trusted.packages' was supplied but isn't a known config.
+""2022-08-04T14:01:39.805Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka version: 2.8.0
+""2022-08-04T14:01:39.805Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka commitId: ebb1d6e21cc92130
+""2022-08-04T14:01:39.805Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka startTimeMs: 1659601899805
+""2022-08-04T14:01:39.806Z-restartedMain INFO  o.a.k.c.c.KafkaConsumer: [Consumer clientId=consumer-group_id2-2, groupId=group_id2] Subscribed to topic(s): TweetApp
+""2022-08-04T14:01:39.819Z-restartedMain INFO  o.s.b.w.e.t.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+""2022-08-04T14:01:39.820Z-restartedMain INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Context refreshed
+""2022-08-04T14:01:39.842Z-restartedMain INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Found 1 custom documentation plugin(s)
+""2022-08-04T14:01:39.945Z-restartedMain INFO  s.d.s.w.s.ApiListingReferenceScanner: Scanning for api listing references
+""2022-08-04T14:01:40.307Z-restartedMain INFO  c.t.TweetApplication: Started TweetApplication in 16.252 seconds (JVM running for 17.183)
+""2022-08-04T14:01:40.648Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.Metadata: [Consumer clientId=consumer-group_id2-2, groupId=group_id2] Cluster ID: Eg2eKKhORrOd9sxU5l-n5w
+""2022-08-04T14:01:40.648Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.Metadata: [Consumer clientId=consumer-group_id1-1, groupId=group_id1] Cluster ID: Eg2eKKhORrOd9sxU5l-n5w
+""2022-08-04T14:01:40.650Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-2, groupId=group_id2] Discovered group coordinator DESKTOP-JQTN3HQ:9092 (id: 2147483647 rack: null)
+""2022-08-04T14:01:40.650Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-1, groupId=group_id1] Discovered group coordinator DESKTOP-JQTN3HQ:9092 (id: 2147483647 rack: null)
+""2022-08-04T14:01:40.654Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-1, groupId=group_id1] (Re-)joining group
+""2022-08-04T14:01:40.654Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-2, groupId=group_id2] (Re-)joining group
+""2022-08-04T14:01:40.674Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-2, groupId=group_id2] (Re-)joining group
+""2022-08-04T14:01:40.717Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-2, groupId=group_id2] Successfully joined group with generation Generation{generationId=51, memberId='consumer-group_id2-2-73a580d3-16c8-49fd-ac22-4f84601f352a', protocol='range'}
+""2022-08-04T14:01:40.718Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-1, groupId=group_id1] (Re-)joining group
+""2022-08-04T14:01:40.719Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-2, groupId=group_id2] Finished assignment for group at generation 51: {consumer-group_id2-2-73a580d3-16c8-49fd-ac22-4f84601f352a=Assignment(partitions=[TweetApp-0, TweetApp-1, TweetApp-2])}
+""2022-08-04T14:01:40.737Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-1, groupId=group_id1] Successfully joined group with generation Generation{generationId=51, memberId='consumer-group_id1-1-4919d795-6157-4a31-a74d-9f2792a922d0', protocol='range'}
+""2022-08-04T14:01:40.737Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-1, groupId=group_id1] Finished assignment for group at generation 51: {consumer-group_id1-1-4919d795-6157-4a31-a74d-9f2792a922d0=Assignment(partitions=[Logs-0, Logs-1, Logs-2])}
+""2022-08-04T14:01:40.784Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-1, groupId=group_id1] Successfully synced group in generation Generation{generationId=51, memberId='consumer-group_id1-1-4919d795-6157-4a31-a74d-9f2792a922d0', protocol='range'}
+""2022-08-04T14:01:40.784Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-2, groupId=group_id2] Successfully synced group in generation Generation{generationId=51, memberId='consumer-group_id2-2-73a580d3-16c8-49fd-ac22-4f84601f352a', protocol='range'}
+""2022-08-04T14:01:40.785Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-1, groupId=group_id1] Notifying assignor about the new Assignment(partitions=[Logs-0, Logs-1, Logs-2])
+""2022-08-04T14:01:40.785Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-2, groupId=group_id2] Notifying assignor about the new Assignment(partitions=[TweetApp-0, TweetApp-1, TweetApp-2])
+""2022-08-04T14:01:40.789Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-1, groupId=group_id1] Adding newly assigned partitions: Logs-0, Logs-2, Logs-1
+""2022-08-04T14:01:40.789Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-2, groupId=group_id2] Adding newly assigned partitions: TweetApp-1, TweetApp-0, TweetApp-2
+""2022-08-04T14:01:40.803Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-1, groupId=group_id1] Setting offset for partition Logs-0 to the committed offset FetchPosition{offset=15, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:01:40.803Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-2, groupId=group_id2] Setting offset for partition TweetApp-2 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:01:40.804Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-2, groupId=group_id2] Setting offset for partition TweetApp-1 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:01:40.804Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-1, groupId=group_id1] Setting offset for partition Logs-2 to the committed offset FetchPosition{offset=14, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:01:40.804Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-2, groupId=group_id2] Setting offset for partition TweetApp-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:01:40.804Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-1, groupId=group_id1] Setting offset for partition Logs-1 to the committed offset FetchPosition{offset=24, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:01:40.805Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer: group_id1: partitions assigned: [Logs-0, Logs-2, Logs-1]
+""2022-08-04T14:01:40.805Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer: group_id2: partitions assigned: [TweetApp-1, TweetApp-0, TweetApp-2]
+""2022-08-04T14:05:01.783Z-http-nio-8080-exec-2 INFO  o.a.c.c.C.[.[.[/]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2022-08-04T14:05:01.796Z-http-nio-8080-exec-2 INFO  o.s.w.s.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+""2022-08-04T14:05:01.796Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: Detected StandardServletMultipartResolver
+""2022-08-04T14:05:01.796Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: Detected AcceptHeaderLocaleResolver
+""2022-08-04T14:05:01.796Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: Detected FixedThemeResolver
+""2022-08-04T14:05:01.797Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5cc0684a
+""2022-08-04T14:05:01.797Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: Detected org.springframework.web.servlet.support.SessionFlashMapManager@e9fd091
+""2022-08-04T14:05:01.797Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: enableLoggingRequestDetails='true': request parameters and headers will be shown which may lead to unsafe logging of potentially sensitive data
+""2022-08-04T14:05:01.797Z-http-nio-8080-exec-2 INFO  o.s.w.s.DispatcherServlet: Completed initialization in 1 ms
+""2022-08-04T14:05:01.806Z-http-nio-8080-exec-2 INFO  c.t.s.JWTFilter: Token receved     ++++    eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkQXQiOjE2NTk2MDE1MTksInVzZXJJZCI6IjYyZThmMGI5ODI4ZmJiMWY1NGFlMmIzMiJ9.Wry1BNbb_ZSp7tbJ4DdVw0tOZ7GFVNW6ZQBap5jBSnY
+""2022-08-04T14:05:02.542Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: GET "/api/v1.0/tweets/all", parameters={}
+""2022-08-04T14:05:02.551Z-http-nio-8080-exec-2 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped to com.tweetapp.controller.TweetController#getAllTweets()
+""2022-08-04T14:05:02.626Z-http-nio-8080-exec-2 INFO  o.a.k.c.p.ProducerConfig: ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = true
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+""2022-08-04T14:05:02.711Z-http-nio-8080-exec-2 WARN  o.a.k.c.p.ProducerConfig: The configuration 'internal.auto.downgrade.txn.commit' was supplied but isn't a known config.
+""2022-08-04T14:05:02.712Z-http-nio-8080-exec-2 INFO  o.a.k.c.u.AppInfoParser: Kafka version: 2.8.0
+""2022-08-04T14:05:02.712Z-http-nio-8080-exec-2 INFO  o.a.k.c.u.AppInfoParser: Kafka commitId: ebb1d6e21cc92130
+""2022-08-04T14:05:02.712Z-http-nio-8080-exec-2 INFO  o.a.k.c.u.AppInfoParser: Kafka startTimeMs: 1659602102712
+""2022-08-04T14:05:02.732Z-kafka-producer-network-thread | producer-1 INFO  o.a.k.c.Metadata: [Producer clientId=producer-1] Cluster ID: Eg2eKKhORrOd9sxU5l-n5w
+""2022-08-04T14:05:02.748Z-http-nio-8080-exec-2 INFO  c.t.k.ProducerService: Message posted successfully into Logs kafka topic
+""2022-08-04T14:05:02.749Z-http-nio-8080-exec-2 INFO  c.t.k.ProducerService: Message posted successfully into Logs kafka topic
+""2022-08-04T14:05:02.750Z-http-nio-8080-exec-2 INFO  c.t.s.TweetServiceImpl: List of Tweets retrieved successfully
+""2022-08-04T14:05:02.750Z-http-nio-8080-exec-2 INFO  c.t.k.ProducerService: Message posted successfully into Logs kafka topic
+""2022-08-04T14:05:03.012Z-http-nio-8080-exec-2 INFO  o.m.d.connection: Opened connection [connectionId{localValue:3, serverValue:26}] to localhost:27017
+""2022-08-04T14:05:03.119Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  c.t.k.ConsumerService: Started getAllTweets() method
+""2022-08-04T14:05:03.119Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  c.t.k.ConsumerService: Entering getAllTweets() method
+""2022-08-04T14:05:03.120Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  c.t.k.ConsumerService: Exiting getAllTweets() method
+""2022-08-04T14:05:03.147Z-http-nio-8080-exec-2 INFO  c.t.c.TweetController: Fetching List of all Tweets started in controller
+""2022-08-04T14:05:03.149Z-http-nio-8080-exec-2 INFO  c.t.k.ProducerService: Message posted successfully into Logs kafka topic
+""2022-08-04T14:05:03.154Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  c.t.k.ConsumerService: Exiting getAllTweets() method
+""2022-08-04T14:05:03.256Z-http-nio-8080-exec-2 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor: Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json, application/json, application/*+json]
+""2022-08-04T14:05:03.257Z-http-nio-8080-exec-2 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor: Writing [[Tweet [tweetId=1, tweetMsg=First Test, tweetTag=test, postTime=Tue Aug 02 17:43:41 IST 2022, user=n (truncated)...]
+""2022-08-04T14:05:03.317Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: Completed 200 OK
+""2022-08-04T14:13:17.932Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-1, groupId=group_id1] Revoke previously assigned partitions Logs-0, Logs-2, Logs-1
+""2022-08-04T14:13:17.932Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-2, groupId=group_id2] Revoke previously assigned partitions TweetApp-1, TweetApp-0, TweetApp-2
+""2022-08-04T14:13:17.932Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer: group_id2: partitions revoked: [TweetApp-1, TweetApp-0, TweetApp-2]
+""2022-08-04T14:13:17.932Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer: group_id1: partitions revoked: [Logs-0, Logs-2, Logs-1]
+""2022-08-04T14:13:17.933Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-1, groupId=group_id1] Member consumer-group_id1-1-4919d795-6157-4a31-a74d-9f2792a922d0 sending LeaveGroup request to coordinator DESKTOP-JQTN3HQ:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+""2022-08-04T14:13:17.933Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-2, groupId=group_id2] Member consumer-group_id2-2-73a580d3-16c8-49fd-ac22-4f84601f352a sending LeaveGroup request to coordinator DESKTOP-JQTN3HQ:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+""2022-08-04T14:13:17.934Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.KafkaConsumer: [Consumer clientId=consumer-group_id1-1, groupId=group_id1] Unsubscribed all topics or patterns and assigned partitions
+""2022-08-04T14:13:17.934Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.KafkaConsumer: [Consumer clientId=consumer-group_id2-2, groupId=group_id2] Unsubscribed all topics or patterns and assigned partitions
+""2022-08-04T14:13:18.026Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.m.Metrics: Metrics scheduler closed
+""2022-08-04T14:13:18.026Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.m.Metrics: Metrics scheduler closed
+""2022-08-04T14:13:18.026Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.m.Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+""2022-08-04T14:13:18.026Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.m.Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+""2022-08-04T14:13:18.027Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.m.Metrics: Metrics reporters closed
+""2022-08-04T14:13:18.027Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.m.Metrics: Metrics reporters closed
+""2022-08-04T14:13:18.034Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.u.AppInfoParser: App info kafka.consumer for consumer-group_id2-2 unregistered
+""2022-08-04T14:13:18.034Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.u.AppInfoParser: App info kafka.consumer for consumer-group_id1-1 unregistered
+""2022-08-04T14:13:18.034Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer$ListenerConsumer: group_id1: Consumer stopped
+""2022-08-04T14:13:18.034Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer$ListenerConsumer: group_id2: Consumer stopped
+""2022-08-04T14:13:18.056Z-Thread-4 INFO  o.a.k.c.p.KafkaProducer: [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+""2022-08-04T14:13:18.058Z-Thread-4 INFO  o.a.k.c.m.Metrics: Metrics scheduler closed
+""2022-08-04T14:13:18.058Z-Thread-4 INFO  o.a.k.c.m.Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+""2022-08-04T14:13:18.058Z-Thread-4 INFO  o.a.k.c.m.Metrics: Metrics reporters closed
+""2022-08-04T14:13:18.059Z-Thread-4 INFO  o.a.k.c.u.AppInfoParser: App info kafka.producer for producer-1 unregistered
+""2022-08-04T14:13:18.064Z-Thread-4 INFO  o.m.d.connection: Closed connection [connectionId{localValue:3, serverValue:26}] to localhost:27017 because the pool has been closed.
+""2022-08-04T14:13:18.274Z-restartedMain INFO  c.t.TweetApplication: Starting TweetApplication using Java 12.0.1 on DESKTOP-JQTN3HQ with PID 15312 (D:\UseCase\tweet\target\classes started by Abi in D:\UseCase\tweet)
+""2022-08-04T14:13:18.275Z-restartedMain INFO  c.t.TweetApplication: No active profile set, falling back to default profiles: default
+""2022-08-04T14:13:19.273Z-restartedMain INFO  o.s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+""2022-08-04T14:13:19.289Z-restartedMain INFO  o.s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 15 ms. Found 2 MongoDB repository interfaces.
+""2022-08-04T14:13:19.634Z-restartedMain INFO  o.s.b.w.e.t.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+""2022-08-04T14:13:19.635Z-restartedMain INFO  o.a.c.c.StandardService: Starting service [Tomcat]
+""2022-08-04T14:13:19.635Z-restartedMain INFO  o.a.c.c.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.48]
+""2022-08-04T14:13:19.986Z-restartedMain INFO  o.a.c.c.C.[.[.[/]: Initializing Spring embedded WebApplicationContext
+""2022-08-04T14:13:19.986Z-restartedMain INFO  o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1706 ms
+""2022-08-04T14:13:20.064Z-restartedMain INFO  o.m.d.cluster  : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+""2022-08-04T14:13:20.072Z-restartedMain WARN  o.s.d.c.CustomConversions: Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+""2022-08-04T14:13:20.087Z-cluster-ClusterId{value='62eb86a8f204131bdbd90af7', description='null'}-localhost:27017 INFO  o.m.d.connection: Opened connection [connectionId{localValue:4, serverValue:27}] to localhost:27017
+""2022-08-04T14:13:20.089Z-cluster-rtt-ClusterId{value='62eb86a8f204131bdbd90af7', description='null'}-localhost:27017 INFO  o.m.d.connection: Opened connection [connectionId{localValue:5, serverValue:28}] to localhost:27017
+""2022-08-04T14:13:20.093Z-cluster-ClusterId{value='62eb86a8f204131bdbd90af7', description='null'}-localhost:27017 INFO  o.m.d.cluster  : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=19958500}
+""2022-08-04T14:13:20.103Z-restartedMain INFO  o.s.b.d.a.OptionalLiveReloadServer: LiveReload server is running on port 35729
+""2022-08-04T14:13:20.107Z-restartedMain WARN  o.s.d.c.CustomConversions: Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+""2022-08-04T14:13:20.141Z-restartedMain INFO  c.t.k.KafkaProducerConfig: Kafka producer bean for string method created
+""2022-08-04T14:13:20.142Z-restartedMain INFO  c.t.k.KafkaProducerConfig: Kalfa configuration for string producer method is completed
+""2022-08-04T14:13:20.147Z-restartedMain INFO  c.t.k.KafkaProducerConfig: kafka producer bean for tweet method created
+""2022-08-04T14:13:20.148Z-restartedMain INFO  c.t.k.KafkaProducerConfig: Kalfa configuration for tweet producer method is completed
+""2022-08-04T14:13:20.157Z-restartedMain INFO  c.t.k.KafkaConsumerConfig: Kalfa configuration for tweet consumer method is completed
+""2022-08-04T14:13:20.165Z-restartedMain INFO  c.t.k.KafkaConsumerConfig: Kafka consumer bean for tweet method created
+""2022-08-04T14:13:20.269Z-restartedMain DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping: 19 mappings in 'requestMappingHandlerMapping'
+""2022-08-04T14:13:20.311Z-restartedMain INFO  o.s.b.a.e.w.EndpointLinksResolver: Exposing 3 endpoint(s) beneath base path '/actuator'
+""2022-08-04T14:13:20.341Z-restartedMain INFO  c.t.k.KafkaConsumerConfig: Kalfa configuration for string consumer method is completed
+""2022-08-04T14:13:20.342Z-restartedMain INFO  c.t.k.KafkaConsumerConfig: Kafka consumer bean for string method created
+""2022-08-04T14:13:20.383Z-restartedMain DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter: ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""2022-08-04T14:13:20.396Z-restartedMain DEBUG o.s.w.s.h.SimpleUrlHandlerMapping: Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+""2022-08-04T14:13:20.401Z-restartedMain DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver: ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+""2022-08-04T14:13:20.457Z-restartedMain INFO  o.a.k.c.c.ConsumerConfig: ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group_id1-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group_id1
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+""2022-08-04T14:13:20.463Z-restartedMain WARN  o.a.k.c.c.ConsumerConfig: The configuration 'spring.json.trusted.packages' was supplied but isn't a known config.
+""2022-08-04T14:13:20.463Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka version: 2.8.0
+""2022-08-04T14:13:20.463Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka commitId: ebb1d6e21cc92130
+""2022-08-04T14:13:20.464Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka startTimeMs: 1659602600463
+""2022-08-04T14:13:20.464Z-restartedMain INFO  o.a.k.c.c.KafkaConsumer: [Consumer clientId=consumer-group_id1-3, groupId=group_id1] Subscribed to topic(s): Logs
+""2022-08-04T14:13:20.467Z-restartedMain INFO  o.a.k.c.c.ConsumerConfig: ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group_id2-4
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group_id2
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+""2022-08-04T14:13:20.472Z-restartedMain WARN  o.a.k.c.c.ConsumerConfig: The configuration 'spring.json.trusted.packages' was supplied but isn't a known config.
+""2022-08-04T14:13:20.472Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.Metadata: [Consumer clientId=consumer-group_id1-3, groupId=group_id1] Cluster ID: Eg2eKKhORrOd9sxU5l-n5w
+""2022-08-04T14:13:20.473Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka version: 2.8.0
+""2022-08-04T14:13:20.473Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka commitId: ebb1d6e21cc92130
+""2022-08-04T14:13:20.473Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-3, groupId=group_id1] Discovered group coordinator DESKTOP-JQTN3HQ:9092 (id: 2147483647 rack: null)
+""2022-08-04T14:13:20.473Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka startTimeMs: 1659602600473
+""2022-08-04T14:13:20.473Z-restartedMain INFO  o.a.k.c.c.KafkaConsumer: [Consumer clientId=consumer-group_id2-4, groupId=group_id2] Subscribed to topic(s): TweetApp
+""2022-08-04T14:13:20.474Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-3, groupId=group_id1] (Re-)joining group
+""2022-08-04T14:13:20.484Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-3, groupId=group_id1] (Re-)joining group
+""2022-08-04T14:13:20.486Z-restartedMain INFO  o.s.b.w.e.t.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+""2022-08-04T14:13:20.486Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.Metadata: [Consumer clientId=consumer-group_id2-4, groupId=group_id2] Cluster ID: Eg2eKKhORrOd9sxU5l-n5w
+""2022-08-04T14:13:20.486Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-4, groupId=group_id2] Discovered group coordinator DESKTOP-JQTN3HQ:9092 (id: 2147483647 rack: null)
+""2022-08-04T14:13:20.486Z-restartedMain INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Context refreshed
+""2022-08-04T14:13:20.487Z-restartedMain INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Found 1 custom documentation plugin(s)
+""2022-08-04T14:13:20.487Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-4, groupId=group_id2] (Re-)joining group
+""2022-08-04T14:13:20.489Z-restartedMain INFO  s.d.s.w.s.ApiListingReferenceScanner: Scanning for api listing references
+""2022-08-04T14:13:20.617Z-restartedMain INFO  c.t.TweetApplication: Started TweetApplication in 2.398 seconds (JVM running for 717.494)
+""2022-08-04T14:13:20.623Z-restartedMain INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener: Condition evaluation unchanged
+""2022-08-04T14:13:20.697Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-3, groupId=group_id1] Successfully joined group with generation Generation{generationId=53, memberId='consumer-group_id1-3-e4756beb-e57f-4ec4-85ac-cbe7d6f980b4', protocol='range'}
+""2022-08-04T14:13:20.698Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-4, groupId=group_id2] (Re-)joining group
+""2022-08-04T14:13:21.857Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-3, groupId=group_id1] Finished assignment for group at generation 53: {consumer-group_id1-3-e4756beb-e57f-4ec4-85ac-cbe7d6f980b4=Assignment(partitions=[Logs-0, Logs-1, Logs-2])}
+""2022-08-04T14:13:22.572Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-4, groupId=group_id2] Successfully joined group with generation Generation{generationId=53, memberId='consumer-group_id2-4-8a2ed907-4d2e-43ec-9bae-7190ef9128da', protocol='range'}
+""2022-08-04T14:13:22.573Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-4, groupId=group_id2] Finished assignment for group at generation 53: {consumer-group_id2-4-8a2ed907-4d2e-43ec-9bae-7190ef9128da=Assignment(partitions=[TweetApp-0, TweetApp-1, TweetApp-2])}
+""2022-08-04T14:13:22.573Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-3, groupId=group_id1] Successfully synced group in generation Generation{generationId=53, memberId='consumer-group_id1-3-e4756beb-e57f-4ec4-85ac-cbe7d6f980b4', protocol='range'}
+""2022-08-04T14:13:22.574Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-3, groupId=group_id1] Notifying assignor about the new Assignment(partitions=[Logs-0, Logs-1, Logs-2])
+""2022-08-04T14:13:22.574Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-3, groupId=group_id1] Adding newly assigned partitions: Logs-0, Logs-2, Logs-1
+""2022-08-04T14:13:22.576Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-4, groupId=group_id2] Successfully synced group in generation Generation{generationId=53, memberId='consumer-group_id2-4-8a2ed907-4d2e-43ec-9bae-7190ef9128da', protocol='range'}
+""2022-08-04T14:13:22.576Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-4, groupId=group_id2] Notifying assignor about the new Assignment(partitions=[TweetApp-0, TweetApp-1, TweetApp-2])
+""2022-08-04T14:13:22.577Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-4, groupId=group_id2] Adding newly assigned partitions: TweetApp-1, TweetApp-0, TweetApp-2
+""2022-08-04T14:13:22.577Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-3, groupId=group_id1] Setting offset for partition Logs-0 to the committed offset FetchPosition{offset=15, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:13:22.577Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-3, groupId=group_id1] Setting offset for partition Logs-2 to the committed offset FetchPosition{offset=17, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:13:22.577Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-3, groupId=group_id1] Setting offset for partition Logs-1 to the committed offset FetchPosition{offset=25, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:13:22.578Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer: group_id1: partitions assigned: [Logs-0, Logs-2, Logs-1]
+""2022-08-04T14:13:22.579Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-4, groupId=group_id2] Setting offset for partition TweetApp-2 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:13:22.579Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-4, groupId=group_id2] Setting offset for partition TweetApp-1 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:13:22.579Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-4, groupId=group_id2] Setting offset for partition TweetApp-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:13:22.579Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer: group_id2: partitions assigned: [TweetApp-1, TweetApp-0, TweetApp-2]
+""2022-08-04T14:13:31.679Z-http-nio-8080-exec-2 INFO  o.a.c.c.C.[.[.[/]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2022-08-04T14:13:31.679Z-http-nio-8080-exec-2 INFO  o.s.w.s.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+""2022-08-04T14:13:31.679Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: Detected StandardServletMultipartResolver
+""2022-08-04T14:13:31.679Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: Detected AcceptHeaderLocaleResolver
+""2022-08-04T14:13:31.679Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: Detected FixedThemeResolver
+""2022-08-04T14:13:31.680Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6058fdaf
+""2022-08-04T14:13:31.681Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: Detected org.springframework.web.servlet.support.SessionFlashMapManager@6e9f0fd4
+""2022-08-04T14:13:31.681Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: enableLoggingRequestDetails='true': request parameters and headers will be shown which may lead to unsafe logging of potentially sensitive data
+""2022-08-04T14:13:31.681Z-http-nio-8080-exec-2 INFO  o.s.w.s.DispatcherServlet: Completed initialization in 2 ms
+""2022-08-04T14:13:31.682Z-http-nio-8080-exec-2 INFO  c.t.s.JWTFilter: Token receved     ++++    eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkQXQiOjE2NTk2MDE1MTksInVzZXJJZCI6IjYyZThmMGI5ODI4ZmJiMWY1NGFlMmIzMiJ9.Wry1BNbb_ZSp7tbJ4DdVw0tOZ7GFVNW6ZQBap5jBSnY
+""2022-08-04T14:13:31.683Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: GET "/api/v1.0/tweets/all", parameters={}
+""2022-08-04T14:13:31.684Z-http-nio-8080-exec-2 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped to com.tweetapp.controller.TweetController#getAllTweets()
+""2022-08-04T14:13:31.685Z-http-nio-8080-exec-2 INFO  o.a.k.c.p.ProducerConfig: ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-2
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = true
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+""2022-08-04T14:13:31.689Z-http-nio-8080-exec-2 WARN  o.a.k.c.p.ProducerConfig: The configuration 'internal.auto.downgrade.txn.commit' was supplied but isn't a known config.
+""2022-08-04T14:13:31.690Z-http-nio-8080-exec-2 INFO  o.a.k.c.u.AppInfoParser: Kafka version: 2.8.0
+""2022-08-04T14:13:31.690Z-http-nio-8080-exec-2 INFO  o.a.k.c.u.AppInfoParser: Kafka commitId: ebb1d6e21cc92130
+""2022-08-04T14:13:31.690Z-http-nio-8080-exec-2 INFO  o.a.k.c.u.AppInfoParser: Kafka startTimeMs: 1659602611689
+""2022-08-04T14:13:31.693Z-kafka-producer-network-thread | producer-2 INFO  o.a.k.c.Metadata: [Producer clientId=producer-2] Cluster ID: Eg2eKKhORrOd9sxU5l-n5w
+""2022-08-04T14:13:31.694Z-http-nio-8080-exec-2 INFO  c.t.k.ProducerService: Message posted successfully into Logs kafka topic
+""2022-08-04T14:13:31.695Z-http-nio-8080-exec-2 INFO  c.t.k.ProducerService: Message posted successfully into Logs kafka topic
+""2022-08-04T14:13:31.695Z-http-nio-8080-exec-2 INFO  c.t.s.TweetServiceImpl: List of Tweets retrieved successfully
+""2022-08-04T14:13:31.695Z-http-nio-8080-exec-2 INFO  c.t.k.ProducerService: Message posted successfully into Logs kafka topic
+""2022-08-04T14:13:31.701Z-http-nio-8080-exec-2 INFO  o.m.d.connection: Opened connection [connectionId{localValue:6, serverValue:29}] to localhost:27017
+""2022-08-04T14:13:31.702Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  c.t.k.ConsumerService: Started getAllTweets() method
+""2022-08-04T14:13:31.702Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  c.t.k.ConsumerService: Entering getAllTweets() method
+""2022-08-04T14:13:31.702Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  c.t.k.ConsumerService: Exiting getAllTweets() method
+""2022-08-04T14:13:31.719Z-http-nio-8080-exec-2 INFO  c.t.c.TweetController: Fetching List of all Tweets started in controller
+""2022-08-04T14:13:31.720Z-http-nio-8080-exec-2 INFO  c.t.k.ProducerService: Message posted successfully into Logs kafka topic
+""2022-08-04T14:13:31.721Z-http-nio-8080-exec-2 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor: Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json, application/json, application/*+json]
+""2022-08-04T14:13:31.721Z-http-nio-8080-exec-2 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor: Writing [[Tweet [tweetId=1, tweetMsg=First Test, tweetTag=test, postTime=Tue Aug 02 17:43:41 IST 2022, user=n (truncated)...]
+""2022-08-04T14:13:31.723Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  c.t.k.ConsumerService: Exiting getAllTweets() method
+""2022-08-04T14:13:31.727Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: Completed 200 OK
+""2022-08-04T14:17:16.245Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-3, groupId=group_id1] Revoke previously assigned partitions Logs-0, Logs-2, Logs-1
+""2022-08-04T14:17:16.245Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-4, groupId=group_id2] Revoke previously assigned partitions TweetApp-1, TweetApp-0, TweetApp-2
+""2022-08-04T14:17:16.245Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer: group_id2: partitions revoked: [TweetApp-1, TweetApp-0, TweetApp-2]
+""2022-08-04T14:17:16.245Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer: group_id1: partitions revoked: [Logs-0, Logs-2, Logs-1]
+""2022-08-04T14:17:16.246Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-4, groupId=group_id2] Member consumer-group_id2-4-8a2ed907-4d2e-43ec-9bae-7190ef9128da sending LeaveGroup request to coordinator DESKTOP-JQTN3HQ:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+""2022-08-04T14:17:16.246Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-3, groupId=group_id1] Member consumer-group_id1-3-e4756beb-e57f-4ec4-85ac-cbe7d6f980b4 sending LeaveGroup request to coordinator DESKTOP-JQTN3HQ:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+""2022-08-04T14:17:16.246Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.KafkaConsumer: [Consumer clientId=consumer-group_id1-3, groupId=group_id1] Unsubscribed all topics or patterns and assigned partitions
+""2022-08-04T14:17:16.246Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.KafkaConsumer: [Consumer clientId=consumer-group_id2-4, groupId=group_id2] Unsubscribed all topics or patterns and assigned partitions
+""2022-08-04T14:17:16.250Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.m.Metrics: Metrics scheduler closed
+""2022-08-04T14:17:16.250Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.m.Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+""2022-08-04T14:17:16.250Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.m.Metrics: Metrics reporters closed
+""2022-08-04T14:17:16.252Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.u.AppInfoParser: App info kafka.consumer for consumer-group_id2-4 unregistered
+""2022-08-04T14:17:16.252Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer$ListenerConsumer: group_id2: Consumer stopped
+""2022-08-04T14:17:16.274Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.m.Metrics: Metrics scheduler closed
+""2022-08-04T14:17:16.274Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.m.Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+""2022-08-04T14:17:16.274Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.m.Metrics: Metrics reporters closed
+""2022-08-04T14:17:16.287Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.u.AppInfoParser: App info kafka.consumer for consumer-group_id1-3 unregistered
+""2022-08-04T14:17:16.288Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer$ListenerConsumer: group_id1: Consumer stopped
+""2022-08-04T14:17:16.293Z-Thread-7 INFO  o.a.k.c.p.KafkaProducer: [Producer clientId=producer-2] Closing the Kafka producer with timeoutMillis = 30000 ms.
+""2022-08-04T14:17:16.293Z-Thread-7 INFO  o.a.k.c.m.Metrics: Metrics scheduler closed
+""2022-08-04T14:17:16.293Z-Thread-7 INFO  o.a.k.c.m.Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+""2022-08-04T14:17:16.293Z-Thread-7 INFO  o.a.k.c.m.Metrics: Metrics reporters closed
+""2022-08-04T14:17:16.294Z-Thread-7 INFO  o.a.k.c.u.AppInfoParser: App info kafka.producer for producer-2 unregistered
+""2022-08-04T14:17:16.295Z-Thread-7 INFO  o.m.d.connection: Closed connection [connectionId{localValue:6, serverValue:29}] to localhost:27017 because the pool has been closed.
+""2022-08-04T14:17:16.411Z-restartedMain INFO  c.t.TweetApplication: Starting TweetApplication using Java 12.0.1 on DESKTOP-JQTN3HQ with PID 15312 (D:\UseCase\tweet\target\classes started by Abi in D:\UseCase\tweet)
+""2022-08-04T14:17:16.411Z-restartedMain INFO  c.t.TweetApplication: No active profile set, falling back to default profiles: default
+""2022-08-04T14:17:17.193Z-restartedMain INFO  o.s.d.r.c.RepositoryConfigurationDelegate: Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+""2022-08-04T14:17:17.248Z-restartedMain INFO  o.s.d.r.c.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 54 ms. Found 2 MongoDB repository interfaces.
+""2022-08-04T14:17:17.433Z-restartedMain INFO  o.s.b.w.e.t.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+""2022-08-04T14:17:17.434Z-restartedMain INFO  o.a.c.c.StandardService: Starting service [Tomcat]
+""2022-08-04T14:17:17.434Z-restartedMain INFO  o.a.c.c.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.48]
+""2022-08-04T14:17:17.574Z-restartedMain INFO  o.a.c.c.C.[.[.[/]: Initializing Spring embedded WebApplicationContext
+""2022-08-04T14:17:17.574Z-restartedMain INFO  o.s.b.w.s.c.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1160 ms
+""2022-08-04T14:17:17.627Z-restartedMain INFO  o.m.d.cluster  : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+""2022-08-04T14:17:17.632Z-cluster-rtt-ClusterId{value='62eb8795f204131bdbd90af8', description='null'}-localhost:27017 INFO  o.m.d.connection: Opened connection [connectionId{localValue:8, serverValue:30}] to localhost:27017
+""2022-08-04T14:17:17.635Z-restartedMain WARN  o.s.d.c.CustomConversions: Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+""2022-08-04T14:17:17.635Z-cluster-ClusterId{value='62eb8795f204131bdbd90af8', description='null'}-localhost:27017 INFO  o.m.d.connection: Opened connection [connectionId{localValue:7, serverValue:31}] to localhost:27017
+""2022-08-04T14:17:17.636Z-cluster-ClusterId{value='62eb8795f204131bdbd90af8', description='null'}-localhost:27017 INFO  o.m.d.cluster  : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5067800}
+""2022-08-04T14:17:17.653Z-restartedMain INFO  o.s.b.d.a.OptionalLiveReloadServer: LiveReload server is running on port 35729
+""2022-08-04T14:17:17.655Z-restartedMain WARN  o.s.d.c.CustomConversions: Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+""2022-08-04T14:17:17.682Z-restartedMain INFO  c.t.k.KafkaProducerConfig: Kafka producer bean for string method created
+""2022-08-04T14:17:17.683Z-restartedMain INFO  c.t.k.KafkaProducerConfig: Kalfa configuration for string producer method is completed
+""2022-08-04T14:17:17.686Z-restartedMain INFO  c.t.k.KafkaProducerConfig: kafka producer bean for tweet method created
+""2022-08-04T14:17:17.687Z-restartedMain INFO  c.t.k.KafkaProducerConfig: Kalfa configuration for tweet producer method is completed
+""2022-08-04T14:17:17.692Z-restartedMain INFO  c.t.k.KafkaConsumerConfig: Kalfa configuration for tweet consumer method is completed
+""2022-08-04T14:17:17.698Z-restartedMain INFO  c.t.k.KafkaConsumerConfig: Kafka consumer bean for tweet method created
+""2022-08-04T14:17:17.779Z-restartedMain DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping: 19 mappings in 'requestMappingHandlerMapping'
+""2022-08-04T14:17:17.806Z-restartedMain INFO  o.s.b.a.e.w.EndpointLinksResolver: Exposing 3 endpoint(s) beneath base path '/actuator'
+""2022-08-04T14:17:17.831Z-restartedMain INFO  c.t.k.KafkaConsumerConfig: Kalfa configuration for string consumer method is completed
+""2022-08-04T14:17:17.832Z-restartedMain INFO  c.t.k.KafkaConsumerConfig: Kafka consumer bean for string method created
+""2022-08-04T14:17:17.880Z-restartedMain DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter: ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""2022-08-04T14:17:17.898Z-restartedMain DEBUG o.s.w.s.h.SimpleUrlHandlerMapping: Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+""2022-08-04T14:17:17.904Z-restartedMain DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver: ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+""2022-08-04T14:17:17.956Z-restartedMain INFO  o.a.k.c.c.ConsumerConfig: ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group_id1-5
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group_id1
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+""2022-08-04T14:17:17.961Z-restartedMain WARN  o.a.k.c.c.ConsumerConfig: The configuration 'spring.json.trusted.packages' was supplied but isn't a known config.
+""2022-08-04T14:17:17.961Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka version: 2.8.0
+""2022-08-04T14:17:17.961Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka commitId: ebb1d6e21cc92130
+""2022-08-04T14:17:17.961Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka startTimeMs: 1659602837961
+""2022-08-04T14:17:17.961Z-restartedMain INFO  o.a.k.c.c.KafkaConsumer: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Subscribed to topic(s): Logs
+""2022-08-04T14:17:17.964Z-restartedMain INFO  o.a.k.c.c.ConsumerConfig: ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group_id2-6
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group_id2
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+""2022-08-04T14:17:17.968Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.Metadata: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Cluster ID: Eg2eKKhORrOd9sxU5l-n5w
+""2022-08-04T14:17:17.968Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Discovered group coordinator DESKTOP-JQTN3HQ:9092 (id: 2147483647 rack: null)
+""2022-08-04T14:17:17.968Z-restartedMain WARN  o.a.k.c.c.ConsumerConfig: The configuration 'spring.json.trusted.packages' was supplied but isn't a known config.
+""2022-08-04T14:17:17.968Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka version: 2.8.0
+""2022-08-04T14:17:17.969Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka commitId: ebb1d6e21cc92130
+""2022-08-04T14:17:17.969Z-restartedMain INFO  o.a.k.c.u.AppInfoParser: Kafka startTimeMs: 1659602837968
+""2022-08-04T14:17:17.969Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] (Re-)joining group
+""2022-08-04T14:17:17.969Z-restartedMain INFO  o.a.k.c.c.KafkaConsumer: [Consumer clientId=consumer-group_id2-6, groupId=group_id2] Subscribed to topic(s): TweetApp
+""2022-08-04T14:17:17.972Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] (Re-)joining group
+""2022-08-04T14:17:17.975Z-restartedMain INFO  o.s.b.w.e.t.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+""2022-08-04T14:17:17.976Z-restartedMain INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Context refreshed
+""2022-08-04T14:17:17.977Z-restartedMain INFO  s.d.s.w.p.DocumentationPluginsBootstrapper: Found 1 custom documentation plugin(s)
+""2022-08-04T14:17:17.979Z-restartedMain INFO  s.d.s.w.s.ApiListingReferenceScanner: Scanning for api listing references
+""2022-08-04T14:17:18.002Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Successfully joined group with generation Generation{generationId=55, memberId='consumer-group_id1-5-1eb83905-f6b8-421a-aacc-4c272419c0c5', protocol='range'}
+""2022-08-04T14:17:18.002Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.Metadata: [Consumer clientId=consumer-group_id2-6, groupId=group_id2] Cluster ID: Eg2eKKhORrOd9sxU5l-n5w
+""2022-08-04T14:17:18.002Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Finished assignment for group at generation 55: {consumer-group_id1-5-1eb83905-f6b8-421a-aacc-4c272419c0c5=Assignment(partitions=[Logs-0, Logs-1, Logs-2])}
+""2022-08-04T14:17:18.026Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-6, groupId=group_id2] Discovered group coordinator DESKTOP-JQTN3HQ:9092 (id: 2147483647 rack: null)
+""2022-08-04T14:17:18.027Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-6, groupId=group_id2] (Re-)joining group
+""2022-08-04T14:17:18.071Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-6, groupId=group_id2] (Re-)joining group
+""2022-08-04T14:17:18.101Z-restartedMain INFO  c.t.TweetApplication: Started TweetApplication in 1.734 seconds (JVM running for 954.977)
+""2022-08-04T14:17:18.103Z-restartedMain INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener: Condition evaluation unchanged
+""2022-08-04T14:17:18.162Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-6, groupId=group_id2] Successfully joined group with generation Generation{generationId=55, memberId='consumer-group_id2-6-921be777-7b23-45e6-8dee-21f94a809112', protocol='range'}
+""2022-08-04T14:17:18.162Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-6, groupId=group_id2] Finished assignment for group at generation 55: {consumer-group_id2-6-921be777-7b23-45e6-8dee-21f94a809112=Assignment(partitions=[TweetApp-0, TweetApp-1, TweetApp-2])}
+""2022-08-04T14:17:18.166Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-6, groupId=group_id2] Successfully synced group in generation Generation{generationId=55, memberId='consumer-group_id2-6-921be777-7b23-45e6-8dee-21f94a809112', protocol='range'}
+""2022-08-04T14:17:18.166Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-6, groupId=group_id2] Notifying assignor about the new Assignment(partitions=[TweetApp-0, TweetApp-1, TweetApp-2])
+""2022-08-04T14:17:18.166Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-6, groupId=group_id2] Adding newly assigned partitions: TweetApp-1, TweetApp-0, TweetApp-2
+""2022-08-04T14:17:18.168Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-6, groupId=group_id2] Setting offset for partition TweetApp-2 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:17:18.168Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-6, groupId=group_id2] Setting offset for partition TweetApp-1 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:17:18.168Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id2-6, groupId=group_id2] Setting offset for partition TweetApp-0 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:17:18.168Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer: group_id2: partitions assigned: [TweetApp-1, TweetApp-0, TweetApp-2]
+""2022-08-04T14:17:18.313Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Successfully synced group in generation Generation{generationId=55, memberId='consumer-group_id1-5-1eb83905-f6b8-421a-aacc-4c272419c0c5', protocol='range'}
+""2022-08-04T14:17:18.314Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Notifying assignor about the new Assignment(partitions=[Logs-0, Logs-1, Logs-2])
+""2022-08-04T14:17:18.314Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Adding newly assigned partitions: Logs-0, Logs-2, Logs-1
+""2022-08-04T14:17:18.315Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Setting offset for partition Logs-0 to the committed offset FetchPosition{offset=15, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:17:18.315Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Setting offset for partition Logs-2 to the committed offset FetchPosition{offset=20, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:17:18.316Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Setting offset for partition Logs-1 to the committed offset FetchPosition{offset=26, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:17:18.316Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer: group_id1: partitions assigned: [Logs-0, Logs-2, Logs-1]
+""2022-08-04T14:20:46.705Z-http-nio-8080-exec-2 INFO  o.a.c.c.C.[.[.[/]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+""2022-08-04T14:20:46.705Z-http-nio-8080-exec-2 INFO  o.s.w.s.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+""2022-08-04T14:20:46.705Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: Detected StandardServletMultipartResolver
+""2022-08-04T14:20:46.705Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: Detected AcceptHeaderLocaleResolver
+""2022-08-04T14:20:46.705Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: Detected FixedThemeResolver
+""2022-08-04T14:20:46.706Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1ed88464
+""2022-08-04T14:20:46.706Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: Detected org.springframework.web.servlet.support.SessionFlashMapManager@101f79cf
+""2022-08-04T14:20:46.706Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: enableLoggingRequestDetails='true': request parameters and headers will be shown which may lead to unsafe logging of potentially sensitive data
+""2022-08-04T14:20:46.706Z-http-nio-8080-exec-2 INFO  o.s.w.s.DispatcherServlet: Completed initialization in 1 ms
+""2022-08-04T14:20:46.707Z-http-nio-8080-exec-2 INFO  c.t.s.JWTFilter: Token receved     ++++    eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkQXQiOjE2NTk2MDE1MTksInVzZXJJZCI6IjYyZThmMGI5ODI4ZmJiMWY1NGFlMmIzMiJ9.Wry1BNbb_ZSp7tbJ4DdVw0tOZ7GFVNW6ZQBap5jBSnY
+""2022-08-04T14:20:46.710Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: GET "/api/v1.0/tweets/all", parameters={}
+""2022-08-04T14:20:46.711Z-http-nio-8080-exec-2 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped to com.tweetapp.controller.TweetController#getAllTweets()
+""2022-08-04T14:20:46.712Z-http-nio-8080-exec-2 INFO  o.a.k.c.p.ProducerConfig: ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-3
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = true
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+""2022-08-04T14:20:46.716Z-http-nio-8080-exec-2 WARN  o.a.k.c.p.ProducerConfig: The configuration 'internal.auto.downgrade.txn.commit' was supplied but isn't a known config.
+""2022-08-04T14:20:46.716Z-http-nio-8080-exec-2 INFO  o.a.k.c.u.AppInfoParser: Kafka version: 2.8.0
+""2022-08-04T14:20:46.716Z-http-nio-8080-exec-2 INFO  o.a.k.c.u.AppInfoParser: Kafka commitId: ebb1d6e21cc92130
+""2022-08-04T14:20:46.716Z-http-nio-8080-exec-2 INFO  o.a.k.c.u.AppInfoParser: Kafka startTimeMs: 1659603046716
+""2022-08-04T14:20:46.720Z-kafka-producer-network-thread | producer-3 INFO  o.a.k.c.Metadata: [Producer clientId=producer-3] Cluster ID: Eg2eKKhORrOd9sxU5l-n5w
+""2022-08-04T14:20:46.721Z-http-nio-8080-exec-2 INFO  c.t.k.ProducerService: Message posted successfully into Logs kafka topic
+""2022-08-04T14:20:46.721Z-http-nio-8080-exec-2 INFO  c.t.k.ProducerService: Message posted successfully into Logs kafka topic
+""2022-08-04T14:20:46.721Z-http-nio-8080-exec-2 INFO  c.t.s.TweetServiceImpl: List of Tweets retrieved successfully
+""2022-08-04T14:20:46.721Z-http-nio-8080-exec-2 INFO  c.t.k.ProducerService: Message posted successfully into Logs kafka topic
+""2022-08-04T14:20:46.726Z-http-nio-8080-exec-2 INFO  o.m.d.connection: Opened connection [connectionId{localValue:9, serverValue:32}] to localhost:27017
+""2022-08-04T14:20:46.728Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  c.t.k.ConsumerService: Started getAllTweets() method
+""2022-08-04T14:20:46.728Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  c.t.k.ConsumerService: Entering getAllTweets() method
+""2022-08-04T14:20:46.728Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  c.t.k.ConsumerService: Exiting getAllTweets() method
+""2022-08-04T14:20:46.740Z-http-nio-8080-exec-2 INFO  c.t.c.TweetController: Fetching List of all Tweets started in controller
+""2022-08-04T14:20:46.740Z-http-nio-8080-exec-2 INFO  c.t.k.ProducerService: Message posted successfully into Logs kafka topic
+""2022-08-04T14:20:46.741Z-http-nio-8080-exec-2 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor: Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json, application/json, application/*+json]
+""2022-08-04T14:20:46.742Z-http-nio-8080-exec-2 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor: Writing [[Tweet [tweetId=1, tweetMsg=First Test, tweetTag=test, postTime=Tue Aug 02 17:43:41 IST 2022, user=n (truncated)...]
+""2022-08-04T14:20:46.748Z-http-nio-8080-exec-2 DEBUG o.s.w.s.DispatcherServlet: Completed 200 OK
+""2022-08-04T14:20:46.773Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  c.t.k.ConsumerService: Exiting getAllTweets() method
+""2022-08-04T14:25:57.391Z-http-nio-8080-exec-7 INFO  c.t.s.JWTFilter: Token receved     ++++    eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkQXQiOjE2NTk2MDE1MTksInVzZXJJZCI6IjYyZThmMGI5ODI4ZmJiMWY1NGFlMmIzMiJ9.Wry1BNbb_ZSp7tbJ4DdVw0tOZ7GFVNW6ZQBap5jBSnY
+""2022-08-04T14:25:57.409Z-http-nio-8080-exec-7 DEBUG o.s.w.s.DispatcherServlet: GET "/api/v1.0/tweets/all", parameters={}
+""2022-08-04T14:25:57.410Z-http-nio-8080-exec-7 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping: Mapped to com.tweetapp.controller.TweetController#getAllTweets()
+""2022-08-04T14:25:57.411Z-http-nio-8080-exec-7 INFO  c.t.k.ProducerService: Message posted successfully into Logs kafka topic
+""2022-08-04T14:25:57.412Z-http-nio-8080-exec-7 INFO  c.t.k.ProducerService: Message posted successfully into Logs kafka topic
+""2022-08-04T14:25:57.412Z-http-nio-8080-exec-7 INFO  c.t.s.TweetServiceImpl: List of Tweets retrieved successfully
+""2022-08-04T14:25:57.412Z-http-nio-8080-exec-7 INFO  c.t.k.ProducerService: Message posted successfully into Logs kafka topic
+""2022-08-04T14:25:57.431Z-http-nio-8080-exec-7 INFO  c.t.c.TweetController: Fetching List of all Tweets started in controller
+""2022-08-04T14:25:57.432Z-http-nio-8080-exec-7 INFO  c.t.k.ProducerService: Message posted successfully into Logs kafka topic
+""2022-08-04T14:25:57.433Z-http-nio-8080-exec-7 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor: Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json, application/json, application/*+json]
+""2022-08-04T14:25:57.433Z-http-nio-8080-exec-7 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor: Writing [[Tweet [tweetId=1, tweetMsg=First Test, tweetTag=test, postTime=Tue Aug 02 17:43:41 IST 2022, user=n (truncated)...]
+""2022-08-04T14:25:57.436Z-http-nio-8080-exec-7 DEBUG o.s.w.s.DispatcherServlet: Completed 200 OK
+""2022-08-04T14:25:57.479Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  c.t.k.ConsumerService: Entering getAllTweets() method
+""2022-08-04T14:25:57.479Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  c.t.k.ConsumerService: Started getAllTweets() method
+""2022-08-04T14:25:57.691Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  c.t.k.ConsumerService: Exiting getAllTweets() method
+""2022-08-04T14:25:57.692Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  c.t.k.ConsumerService: Exiting getAllTweets() method
+""2022-08-04T14:40:04.649Z-kafka-coordinator-heartbeat-thread | group_id1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Group coordinator DESKTOP-JQTN3HQ:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response.isDisconnected: false. Rediscovery will be attempted.
+""2022-08-04T14:40:04.857Z-kafka-coordinator-heartbeat-thread | group_id2 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-6, groupId=group_id2] Group coordinator DESKTOP-JQTN3HQ:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response.isDisconnected: false. Rediscovery will be attempted.
+""2022-08-04T14:40:05.463Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Discovered group coordinator DESKTOP-JQTN3HQ:9092 (id: 2147483647 rack: null)
+""2022-08-04T14:40:05.463Z-org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id2-6, groupId=group_id2] Discovered group coordinator DESKTOP-JQTN3HQ:9092 (id: 2147483647 rack: null)
+""2022-08-04T14:40:08.202Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Attempt to heartbeat with Generation{generationId=55, memberId='consumer-group_id1-5-1eb83905-f6b8-421a-aacc-4c272419c0c5', protocol='range'} and group instance id Optional.empty failed due to UNKNOWN_MEMBER_ID, resetting generation
+""2022-08-04T14:40:08.203Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Giving away all assigned partitions as lost since generation has been reset,indicating that consumer is no longer part of the group
+""2022-08-04T14:40:08.204Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Lost previously assigned partitions Logs-0, Logs-2, Logs-1
+""2022-08-04T14:40:08.222Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer: group_id1: partitions lost: [Logs-0, Logs-2, Logs-1]
+""2022-08-04T14:40:08.222Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer: group_id1: partitions revoked: [Logs-0, Logs-2, Logs-1]
+""2022-08-04T14:40:08.223Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] (Re-)joining group
+""2022-08-04T14:40:08.275Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] (Re-)joining group
+""2022-08-04T14:40:08.377Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Successfully joined group with generation Generation{generationId=57, memberId='consumer-group_id1-5-bd66e425-c223-4404-96bb-5a4208750245', protocol='range'}
+""2022-08-04T14:40:08.377Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Finished assignment for group at generation 57: {consumer-group_id1-5-bd66e425-c223-4404-96bb-5a4208750245=Assignment(partitions=[Logs-0, Logs-1, Logs-2])}
+""2022-08-04T14:40:08.492Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.AbstractCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Successfully synced group in generation Generation{generationId=57, memberId='consumer-group_id1-5-bd66e425-c223-4404-96bb-5a4208750245', protocol='range'}
+""2022-08-04T14:40:08.494Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Notifying assignor about the new Assignment(partitions=[Logs-0, Logs-1, Logs-2])
+""2022-08-04T14:40:08.494Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Adding newly assigned partitions: Logs-0, Logs-2, Logs-1
+""2022-08-04T14:40:08.716Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Setting offset for partition Logs-0 to the committed offset FetchPosition{offset=17, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:40:08.716Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Setting offset for partition Logs-2 to the committed offset FetchPosition{offset=24, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:40:08.716Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.a.k.c.c.i.ConsumerCoordinator: [Consumer clientId=consumer-group_id1-5, groupId=group_id1] Setting offset for partition Logs-1 to the committed offset FetchPosition{offset=28, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-JQTN3HQ:9092 (id: 0 rack: null)], epoch=0}}
+""2022-08-04T14:40:08.716Z-org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1 INFO  o.s.k.l.KafkaMessageListenerContainer: group_id1: partitions assigned: [Logs-0, Logs-2, Logs-1]
+"
